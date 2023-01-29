@@ -1,0 +1,57 @@
+// Colors
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(212, 45%, 89%);
+$grayish-blue: hsl(220, 15%, 55%);
+$dark-blue: hsl(218, 44%, 22%);
+
+.qr-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 0.05px;
+  background-color: $light-gray;
+  font-size: 15px;
+
+  .qr-card {
+    $card-w: 320px;
+    $card-h: 500px;
+    $card-padding: 16px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $card-w;
+    height: $card-h;
+    transform: translate(-50%, -50%);
+    padding: $card-padding;
+    border-radius: 20px;
+    box-shadow: 0 4px 80px -25px $grayish-blue;
+    background-color: $white;
+
+    .qr-image {
+      $size: $card-w - (2 * $card-padding);
+
+      width: $size;
+      height: $size;
+      border-radius: 8px;
+      background-size: cover;
+    }
+
+    .qr-title {
+      padding: 22px 0 0;
+      color: $dark-blue;
+      text-align: center;
+      font-weight: 700;
+      font-family: outfit;
+      font-size: 23px;
+    }
+
+    .qr-desc {
+      padding: 18px 8px 0;
+      color: $grayish-blue;
+      text-align: center;
+      font-weight: 400;
+      font-family: outfit;
+    }
+  }
+}
